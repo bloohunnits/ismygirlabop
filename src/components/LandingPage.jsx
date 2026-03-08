@@ -33,9 +33,9 @@ export default function LandingPage({ onStart }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          12 research-backed behavioral indicators.
+          12 science-backed questions. Real answers.
           <br />
-          One definitive score.
+          No sugarcoating.
         </motion.p>
 
         <motion.p
@@ -44,9 +44,11 @@ export default function LandingPage({ onStart }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.8 }}
         >
-          Based on peer-reviewed psychology research — disgust sensitivity,
-          Big Five personality, sociosexual orientation, K-selection theory, and
-          behavioral risk indicators. Red flags AND green flags. No shame — just science.
+          Look bro — this isn't about shaming anybody. This is about giving you
+          the game. Every question here is backed by actual research — personality
+          psychology, disgust sensitivity, sociosexual orientation, K-selection
+          theory. Red flags AND green flags. We just want you to see what's in
+          front of you.
         </motion.p>
 
         <motion.button
@@ -58,7 +60,7 @@ export default function LandingPage({ onStart }) {
           whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(255,59,148,0.4)" }}
           whileTap={{ scale: 0.97 }}
         >
-          Start the Assessment
+          Let's Find Out
           <span className="btn-arrow">→</span>
         </motion.button>
 
@@ -70,7 +72,7 @@ export default function LandingPage({ onStart }) {
         >
           <span>🔒 Anonymous</span>
           <span>📊 12 Questions</span>
-          <span>⏱️ ~3 Minutes</span>
+          <span>⏱️ ~2 Minutes</span>
         </motion.div>
       </div>
 

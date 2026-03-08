@@ -6,30 +6,30 @@ function getVerdict(score) {
     return {
       label: "She's Clean 💚",
       color: "#00e676",
-      desc: "Based on the indicators assessed, she shows almost none of the behavioral red flags and multiple green flags associated with relationship-oriented women. She appears to be low-risk and genuinely commitment-minded. She's not a bop.",
+      desc: "Bro, you're good. She's barely triggering any red flags and she's stacking green flags. This is the type of girl who's actually about it — relationship-minded, stable, the real deal. She's not a bop. Lock in.",
     };
   if (score <= 30)
     return {
       label: "Mostly Clear 💛",
       color: "#ffeb3b",
-      desc: "She shows a few minor red flags but also several positive indicators. Some of these could be personality quirks rather than real warnings. Stay aware, but don't overthink it. Probably not a bop.",
+      desc: "She's looking pretty solid, king. A couple minor things popped up but nothing crazy — could just be personality quirks. Keep your eyes open but don't psych yourself out. She's probably not a bop.",
     };
   if (score <= 50)
     return {
       label: "Proceed With Caution 🟠",
       color: "#ff9800",
-      desc: "She's triggering a moderate number of red flags without enough green flags to offset them. Any one alone might not mean much, but the combination creates a pattern worth paying attention to. Have honest conversations and keep your eyes open. She might be a bop.",
+      desc: "Alright bro, listen — she's hitting a few too many flags and not enough green to balance it out. Any one of these alone? Maybe nothing. But when they start stacking up like this, that's a pattern. Have some real conversations and pay attention. She might be a bop.",
     };
   if (score <= 70)
     return {
       label: "High Risk 🔴",
       color: "#f44336",
-      desc: "Multiple strong red flags are present and green flags are scarce. The behavioral pattern here is consistent with someone who has had a significant number of sexual partners. The science behind these indicators is well-established. She's likely a bop.",
+      desc: "I'm not gonna sugarcoat it, bro. Multiple strong red flags are popping and the green flags are nowhere to be found. The pattern here is consistent with a high body count. The science on these indicators is solid. She's likely a bop. Move accordingly.",
     };
   return {
     label: "Certified Bop 💀",
     color: "#ff1744",
-    desc: "She's triggering nearly every major red flag with almost no protective green flags. The combined weight of these behavioral signals leaves very little room for doubt. The research is overwhelming — this pattern doesn't emerge by accident. She is, by every measurable standard, a bop.",
+    desc: "Bro. She's hitting damn near everything. Red flags everywhere, green flags ghost. This pattern doesn't happen by accident — the research is overwhelming. By every measurable standard, she is a bop. I'm telling you this as your boy. Act on this information.",
   };
 }
 
@@ -324,9 +324,9 @@ export default function Results({ answers, questions, onRestart, onHome }) {
           🔄 Take It Again
         </motion.button>
         <p className="restart-disclaimer">
-          This assessment is for entertainment and educational purposes. The
-          indicators used are based on published psychological research, but
-          individual results may vary. Use good judgment.
+          This is for the fellas — entertainment and education. Every indicator
+          is based on real published research, but no quiz replaces your own
+          judgment. Use this as a tool, not a verdict. Stay sharp out there, king.
         </p>
       </motion.div>
     </motion.div>

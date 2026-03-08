@@ -3,7 +3,7 @@
 // =============================================
 // type: "red" = bop indicator (yes = bad), "green" = anti-bop indicator (yes = good)
 // weight: 1-10 strength of indicator
-// "not_sure" answers are treated as half-weight
+// "not_sure" answers scored asymmetrically: 30% for red, 20% for green
 
 export const redFlags = [
   {
@@ -13,13 +13,13 @@ export const redFlags = [
     weight: 4,
     icon: "🎭",
     context:
-      'This is classic BOP trickery. Women who frequently use emotionally charged words like "lust" are employing a subtle manipulation tactic — they use this language to get you emotionally invested in a way that benefits them, not you. It creates a false sense of deep connection. It\'s also textbook projection: women with a higher-than-average sex drive often project that intensity onto others through their choice of words. If she\'s constantly framing things in terms of "lust," she may be telling on herself.',
+      'This is classic BOP trickery, bro. Women who throw around emotionally loaded words like "lust" are running a play — they use that language to get you emotionally invested in a way that benefits them, not you. It creates a fake deep connection. It\'s also textbook projection: women with a higher-than-average sex drive project that energy onto you through their word choices. If she\'s constantly framing things in terms of "lust," she\'s telling on herself.',
     yesExplanation:
-      'She uses the word "lust" frequently — this is a manipulation red flag. She may be projecting her own heightened sexuality onto you to create emotional leverage.',
+      'She throws around "lust" a lot — bro, that\'s a manipulation flag. She may be projecting her own heightened sexuality onto you to build emotional leverage. Classic move.',
     noExplanation:
-      "She doesn't lean on emotionally loaded language to draw you in — she's not relying on manipulation tactics to keep your attention.",
+      "She's not using loaded language to reel you in. Good sign — means she's not running manipulation plays to keep your attention.",
     notSureExplanation:
-      "You're not sure about this one. Pay attention going forward — it's a subtle but telling verbal pattern.",
+      "You haven't clocked it yet. Pay attention going forward — it's subtle but once you hear it, you can't unhear it.",
   },
   {
     id: "r2",
@@ -28,13 +28,13 @@ export const redFlags = [
     weight: 5,
     icon: "🩸",
     context:
-      "Research in evolutionary psychology has consistently linked low disgust sensitivity to higher sexual promiscuity. A woman who can sit through extreme horror and gore without flinching has a measurably higher tolerance for things that would make most people uncomfortable — and that tolerance extends beyond the screen. Studies show that individuals with low disgust thresholds tend to have more sexual partners and engage in riskier sexual behavior. It's not about the movies — it's what her comfort with graphic content signals about her psychological makeup.",
+      "Here's the science, bro: evolutionary psychology has consistently linked low disgust sensitivity to higher sexual promiscuity. If she can sit through extreme horror and gore without flinching, she has a higher tolerance for stuff that would bother most people — and that tolerance doesn't stop at the screen. Studies show people with low disgust thresholds have more partners and take more sexual risks. It's not about the movies — it's about what her comfort level signals.",
     yesExplanation:
-      "Her comfort with horror and graphic content suggests lower disgust sensitivity, which research links to higher sexual openness and more partners.",
+      "She's unfazed by horror and gore. That low disgust sensitivity? Research links it directly to higher sexual openness and more partners. Take note.",
     noExplanation:
-      "She's not drawn to horror and gore — suggests typical or higher disgust sensitivity, generally correlated with more selective partner choices.",
+      "She's not into horror and gore — that's actually a good sign. Higher disgust sensitivity generally means more selective with partners.",
     notSureExplanation:
-      "If you haven't tested this yet, try suggesting a graphic horror movie and watch her reaction. It's a reliable low-key litmus test.",
+      "Throw on a gnarly horror movie next time y'all chill. Watch her reaction — it's a lowkey but reliable litmus test.",
   },
   {
     id: "r3",
@@ -43,13 +43,13 @@ export const redFlags = [
     weight: 6,
     icon: "🖋️",
     context:
-      "Tattoos in highly visible, socially stigmatized locations signal several things simultaneously. High pain tolerance — which research associates with higher testosterone and sensation-seeking. Comfort with social deviance and rejection of conventional norms. And visible tattoos in extreme locations are often tied to unresolved trauma and a need for external expression of internal pain. Individuals with more tattoos, particularly in visible locations, report significantly more sexual partners on average.",
+      "Look bro, tattoos in those locations signal a few things at once. High pain tolerance — which research links to higher testosterone and sensation-seeking. Comfort with breaking social norms. And honestly, visible tattoos in extreme spots are often tied to unresolved trauma being expressed externally. The data is clear: more tattoos in visible locations = significantly more sexual partners on average. It's not about judging ink — it's about what the placement tells you.",
     yesExplanation:
-      "Tattoos in extreme, visible locations signal high sensation-seeking, comfort with social deviance, and possible trauma expression — all correlate with higher partner counts.",
+      "Tattoos in extreme, visible spots — that signals sensation-seeking, comfort with being outside the norm, and possibly trauma expression. All of that tracks with higher partner counts.",
     noExplanation:
-      "No extreme placement tattoos. The absence of high-visibility ink removes one common risk indicator.",
+      "No face, neck, or hand tattoos. Removes one risk indicator — doesn't tell you everything, but it's one less flag.",
     notSureExplanation:
-      "You haven't noticed or aren't sure. Tattoo placement matters more than having tattoos at all — keep an eye out.",
+      "You haven't noticed? Tattoo placement matters way more than just having tattoos. Keep your eyes open.",
   },
   {
     id: "r4",
@@ -58,13 +58,13 @@ export const redFlags = [
     weight: 7,
     icon: "🔥",
     context:
-      'A lower-back tattoo has been culturally associated with sexual availability for decades, and the research backs it up. Studies show that men and women alike perceive lower-back tattoos as a signal of sexual openness, and the women who get them are statistically more likely to report higher numbers of sexual partners. It\'s essentially branding — a deliberate choice to place a permanent mark in a location that\'s primarily visible in intimate or revealing contexts. The placement itself is the message.',
+      "Bro, let's keep it real — a lower-back tattoo has been associated with sexual availability for decades, and the research backs it up. Studies show men and women both read lower-back tattoos as a signal of sexual openness, and the women who get them statistically report more partners. It's branding, plain and simple. She chose to put a permanent mark in a spot that's really only visible in intimate or revealing situations. The placement IS the message.",
     yesExplanation:
-      "A lower-back tattoo is one of the most culturally and statistically recognized signals of sexual openness. The placement is deliberate and the research supports what everyone already intuits.",
+      "A tramp stamp is one of the most culturally and statistically recognized signals out there. The placement is deliberate. The research confirms what everyone already knows.",
     noExplanation:
-      "No tramp stamp. One less culturally loaded signal to worry about.",
+      "No tramp stamp. One less red flag to worry about.",
     notSureExplanation:
-      "You haven't seen that area yet. If you find out later, you'll know what it means.",
+      "You haven't seen that area yet. When you do find out, you'll know exactly what it means.",
   },
   {
     id: "r5",
@@ -73,13 +73,13 @@ export const redFlags = [
     weight: 2,
     icon: "📱",
     context:
-      'This one\'s partly tongue-in-cheek — but there\'s a kernel of truth. The "iPad kid" stereotype and the cultural association between iPads and a certain type of chronically-online, attention-seeking lifestyle isn\'t entirely baseless. It\'s a lighthearted check: does she fit a pattern of someone who collects trendy lifestyle accessories signaling a consumption-driven, social-media-heavy existence? Low-weight indicator, but if you know, you know.',
+      'Okay this one\'s kinda a joke — but not entirely. The "iPad girl" energy is real. That chronically-online, consumption-driven, attention-seeking lifestyle isn\'t a myth. If she fits the pattern of collecting trendy lifestyle stuff and living through social media, that\'s a vibe. It\'s a lightweight indicator but if you know, you know. IYKYK.',
     yesExplanation:
-      "She's got the iPad. It's a minor indicator at best, but it fits a certain lifestyle pattern. Don't panic — just note it.",
+      "She's got the iPad. Look, it barely moves the needle, but it fits a certain lifestyle pattern. Don't panic — just note it and keep reading.",
     noExplanation:
-      "No iPad. This barely matters, but hey — one less box checked.",
+      "No iPad. Honestly this one barely matters, but hey — one less box checked.",
     notSureExplanation:
-      "You don't know her device lineup. Fair enough — this is the lightest indicator on the list anyway.",
+      "You don't know her device setup. Fair enough — this is the lightest indicator on here anyway.",
   },
   {
     id: "r6",
@@ -88,13 +88,13 @@ export const redFlags = [
     weight: 5,
     icon: "🔕",
     context:
-      "If her phone is permanently on Do Not Disturb, ask yourself why. The most common reason? She's managing multiple streams of attention and doesn't want them to collide. Constant DND means she's controlling who sees what and when — a classic sign of someone juggling options. She can selectively respond on her own timeline, keeping multiple people on the hook without any of them knowing about each other. A woman who has nothing to hide doesn't need to silence her phone 24/7.",
+      "If her phone stays on DND 24/7, ask yourself why bro. The most common reason? She's juggling multiple dudes and doesn't want the streams crossing. Permanent DND means she's controlling who sees what and when — keeping everyone on her timeline, on her terms. A woman with nothing to hide doesn't need to silence her phone around the clock. That crescent moon icon is telling you something.",
     yesExplanation:
-      "Permanent DND is a classic sign of someone managing multiple attention streams. She's controlling communication flow to keep her options compartmentalized.",
+      "Permanent DND is a classic sign she's managing multiple streams of attention. She's keeping her options compartmentalized. Big flag.",
     noExplanation:
-      "Her phone isn't locked down in DND mode — suggests she's not actively hiding incoming attention from multiple sources.",
+      "Her phone isn't on lockdown — suggests she's not actively hiding incoming attention from other dudes.",
     notSureExplanation:
-      "You haven't noticed. Next time you're together, glance at that crescent moon icon. It tells a story.",
+      "Next time y'all are together, peep that crescent moon icon at the top of her phone. It tells a whole story.",
   },
   {
     id: "r7",
@@ -103,13 +103,13 @@ export const redFlags = [
     weight: 8,
     icon: "👯",
     context:
-      '"Birds of a feather flock together" isn\'t just a saying — it\'s one of the most well-established principles in social psychology. People self-select into friend groups that share their values, behaviors, and lifestyle choices. If her closest friends are promiscuous, the overwhelming likelihood is that she shares those tendencies. Research on social influence shows that sexual behavior norms are heavily shaped by peer groups. Your friends are a mirror of who you are — and her friends are telling you exactly who she is.',
+      "Bro, birds of a feather. This isn't just a saying — it's one of the most proven principles in social psychology. People choose friends who share their values and lifestyle. If her closest girls are known for getting around, the overwhelming odds say she does too. Research shows sexual behavior norms are heavily shaped by your peer group. Her friends are a mirror. They're telling you everything you need to know.",
     yesExplanation:
-      "Her closest friends are promiscuous. This is one of the single strongest indicators — people self-select into groups that mirror their values. Her circle is telling you everything.",
+      "Her friends are hoes? Bro, this is one of the STRONGEST indicators on the whole list. People pick friends who mirror their own values and behavior. Her circle is screaming the answer at you.",
     noExplanation:
-      "Her friends don't raise red flags. A solid social circle is one of the best signs her values align with stability and selectivity.",
+      "Her friends are solid. A good social circle is genuinely one of the best signs that her values align with stability. Big green light.",
     notSureExplanation:
-      "You don't know her friends well enough yet. This is one of the most important indicators — make it a priority to find out.",
+      "You don't know her friends well enough yet. Bro, make this a priority. This is one of the most important indicators — find out who she runs with.",
   },
   {
     id: "r8",
@@ -118,13 +118,13 @@ export const redFlags = [
     weight: 7,
     icon: "🍾",
     context:
-      "Frequent drinking and partying isn't just about having fun — it's about repeatedly placing yourself in environments where impulsive decisions are easy and consequences feel distant. Alcohol consumption is one of the strongest situational predictors of casual sex. If she's deliberately and regularly getting drunk and going out, she's actively seeking environments where sexual opportunities are abundant. There may even be a thrill in the loss of control — a pattern well-documented in sensation-seeking personality types.",
+      "Bro think about it — frequent drinking and partying means she's repeatedly putting herself in environments where impulsive decisions are easy and consequences feel far away. Alcohol is one of the strongest situational predictors of casual sex in all the research. And if she's deliberately and regularly getting drunk and going out? She's actively seeking those high-opportunity environments. There may even be a thrill in the loss of control. It's not about one night out — it's the lifestyle pattern.",
     yesExplanation:
-      "Regular drinking and partying means she's consistently in high-opportunity, low-inhibition environments. One of the strongest lifestyle predictors of a high partner count.",
+      "She's out drinking and partying regularly — that means she's consistently putting herself in low-inhibition, high-opportunity environments. That's one of the biggest lifestyle red flags, bro.",
     noExplanation:
-      "She's not a regular on the party scene. This removes one of the most common environmental factors leading to casual encounters.",
+      "She's not a party girl. That removes one of the most common environmental factors that lead to casual hookups. Solid.",
     notSureExplanation:
-      "You're not sure how often she goes out. Pay attention to weekend patterns and how often alcohol comes up in her stories.",
+      "Pay attention to her weekends bro. How often does alcohol come up? How often is she \"out with the girls\"? The pattern will show itself.",
   },
   {
     id: "r9",
@@ -133,13 +133,13 @@ export const redFlags = [
     weight: 6,
     icon: "👗",
     context:
-      "Consistently provocative dressing is a well-documented signal of attention-seeking behavior and comfort with sexual display. Women who regularly dress in revealing clothing report higher numbers of sexual partners and score higher on sociosexual orientation — the willingness to engage in uncommitted sex. Someone who consistently maximizes sexual attention through clothing is signaling availability, whether consciously or not. People more comfortable showcasing their body to the world tend to be more comfortable sharing it.",
+      "Look, everyone can dress how they want. But if we're analyzing behavioral indicators — and that's what we're doing — consistently provocative dressing is a documented signal of attention-seeking and comfort with sexual display. Women who regularly dress revealing report more partners and score higher on sociosexual orientation. She's signaling availability whether she realizes it or not. People who are more comfortable showcasing their body to the world tend to be more comfortable sharing it. Come on now.",
     yesExplanation:
-      "Consistently provocative dressing is a documented signal of higher sociosexual orientation — she's comfortable with sexual display, which correlates with more partners.",
+      "She stays dressed provocatively — bro, that's a documented signal of higher sociosexual orientation. She's comfortable with sexual display and that correlates directly with more partners.",
     noExplanation:
-      "She dresses modestly or normally most of the time — not driven by a need for constant sexual attention through appearance.",
+      "She dresses modest or normal most of the time — not chasing constant sexual attention through her appearance. Good sign.",
     notSureExplanation:
-      "Think about it: does she dress for the occasion, or does every occasion become an opportunity to show skin?",
+      "Think about it: does she dress for the occasion, or does every occasion become an excuse to show skin? There's your answer.",
   },
   {
     id: "r10",
@@ -148,13 +148,13 @@ export const redFlags = [
     weight: 5,
     icon: "🚬",
     context:
-      "Cigarette smoking is a risk-taking behavior, and risk-taking behaviors cluster together. Smokers report more sexual partners than non-smokers. Smoking is associated with higher impulsivity, sensation-seeking, and comfort with behaviors that prioritize short-term gratification over long-term consequences. It also carries historically masculine behavioral associations — women who adopt more masculine behavioral profiles tend to have higher partner counts.",
+      "Smoking is a risk-taking behavior, and risk-taking behaviors cluster together bro. Smokers consistently report more sexual partners than non-smokers. It's tied to impulsivity, sensation-seeking, and prioritizing short-term gratification over long-term consequences. Smoking also carries traditionally masculine behavioral associations — women who adopt more masculine behavior profiles tend to have higher partner counts. It's not the cigarette itself — it's what the habit signals about who she is.",
     yesExplanation:
-      "Smoking signals impulsivity, sensation-seeking, and comfort with risk — all traits research links to higher numbers of sexual partners.",
+      "She smokes — that signals impulsivity and comfort with risk. Research links these exact traits to higher partner counts. Note it.",
     noExplanation:
-      "She doesn't smoke. One less risk-taking behavior in the picture.",
+      "She doesn't smoke. One less risk-taking behavior on the board.",
     notSureExplanation:
-      "Social smokers count too. If she lights up at parties or when drinking, that still fits the pattern.",
+      "Social smokers count too bro. If she lights up at parties or when drinking, that still fits the pattern.",
   },
   {
     id: "r11",
@@ -163,13 +163,13 @@ export const redFlags = [
     weight: 6,
     icon: "🎪",
     context:
-      "This is one of the most research-backed indicators on this list. The Big Five personality model shows that high Extroversion combined with low Conscientiousness is the single strongest personality predictor of a high number of sexual partners. Extroversion means she thrives on social stimulation, attention, and novelty. Low conscientiousness means impulsivity and lack of follow-through. Together: someone constantly seeking stimulation, surrounded by people, and lacking the self-regulation to say no. Decades of personality research back this up.",
+      "Bro, this is one of the most research-backed indicators on this ENTIRE list. The Big Five personality model — that's the gold standard in psychology — shows that high Extroversion + low Conscientiousness is THE single strongest personality predictor of a high body count. She thrives on social stimulation and attention but can't keep her life organized or follow through on commitments? That combo creates a perfect storm: constantly around people, always seeking stimulation, and lacking the self-control to pump the brakes. Decades of data on this one.",
     yesExplanation:
-      "High extroversion + low conscientiousness is the single strongest personality predictor of high partner count according to Big Five research. Major red flag backed by decades of data.",
+      "High extroversion + disorganized? Bro, this is literally THE strongest personality predictor of high partner count in all of Big Five research. Decades of data back this. Major flag.",
     noExplanation:
-      "She doesn't show this personality combination — one of the most reliable predictors, and she doesn't fit it.",
+      "She doesn't have this combo. That's actually significant — this is one of the most reliable personality-level predictors and she doesn't fit it.",
     notSureExplanation:
-      "Think about it: is she the life of every party but can't keep her apartment clean or follow through on plans? That's the combo.",
+      "Think about it: is she the life of every party but can't keep her apartment clean or follow through on plans? That's the deadly combo right there.",
   },
   {
     id: "r12",
@@ -178,13 +178,13 @@ export const redFlags = [
     weight: 7,
     icon: "💊",
     context:
-      "Drug use is directly tied to impulsivity, sensation-seeking, and willingness to engage in risky behavior — all strongly correlated with higher partner counts. Beyond personality, drugs lower inhibitions and impair judgment, creating situations where casual sex becomes more likely. Individuals who use recreational drugs report significantly more sexual partners. Stimulants and party drugs in particular are associated with hypersexual behavior.",
+      "Drug use is directly tied to impulsivity, sensation-seeking, and willingness to take risks — all of which strongly correlate with higher body counts. Beyond personality, the drugs themselves lower inhibitions and wreck judgment, creating situations where casual sex just... happens. Stimulants and party drugs especially are linked to hypersexual behavior. If she's using recreationally, she's showing you a comfort with risk and altered states that extends into her sexual decisions.",
     yesExplanation:
-      "Recreational drug use directly correlates with higher partner counts through both personality traits and the situational effects of the substances.",
+      "She does drugs — bro, that directly correlates with more partners through both who she is (impulsive, sensation-seeking) and what the substances do (lower inhibitions). Significant flag.",
     noExplanation:
-      "She stays away from drugs. This removes a significant risk factor.",
+      "She stays clean. That removes a big risk factor and suggests she's not driven by sensation-seeking impulses.",
     notSureExplanation:
-      "If you're not sure, that itself might be a flag — drug use often gets hidden early in relationships.",
+      "If you're not sure, that itself might be telling bro. Drug use often gets hidden early in relationships.",
   },
   {
     id: "r13",
@@ -193,13 +193,13 @@ export const redFlags = [
     weight: 6,
     icon: "👥",
     context:
-      "A woman with a disproportionately large number of male friends is operating in a social environment saturated with sexual opportunity. Research on cross-sex friendships shows that men in these friendships almost always experience some degree of sexual attraction. Some women deliberately cultivate male-heavy social circles for the social dynamics — being the sole woman gives her enormous leverage, attention, and validation. It can also indicate difficulty maintaining female friendships, which often signals deeper interpersonal issues.",
+      "Bro, a woman surrounded by male friends is sitting in a social environment packed with sexual opportunity. Research shows men in cross-sex friendships almost always feel some attraction, even when she says it's \"just friends.\" Some women build male-heavy friend groups on purpose — being the one girl in a group of guys gives her insane leverage, attention, and validation. It can also mean she can't maintain friendships with other women, which usually signals deeper issues.",
     yesExplanation:
-      "A disproportionate number of male friends means she's surrounded by sexual opportunity and likely enjoys the attention dynamics of being the woman in a male group.",
+      "Mostly male friends? She's surrounded by opportunity and probably enjoys the attention dynamics of being the only girl in the group. That's a setup, bro.",
     noExplanation:
-      "She maintains a balanced or female-heavy social circle — suggests healthy same-sex friendships and less reliance on male attention.",
+      "She has a balanced or mostly female social circle — healthy same-sex friendships and not relying on male attention for validation. That's solid.",
     notSureExplanation:
-      "Pay attention to who she texts, who she hangs out with, and who she talks about. The ratio will become clear.",
+      "Pay attention to who she texts, who she hangs with, who she talks about. The ratio will become obvious real quick.",
   },
   {
     id: "r14",
@@ -208,13 +208,13 @@ export const redFlags = [
     weight: 5,
     icon: "🌈",
     context:
-      "Research consistently shows that bisexual individuals report higher numbers of sexual partners than both heterosexual and homosexual individuals. Bisexuality effectively doubles the pool of potential partners and is associated with higher overall sexual openness. Studies in major psychology journals have found that bisexual women specifically report the highest average number of sexual partners among all female sexual orientation categories.",
+      "Just the data bro, no judgment: research consistently shows bisexual individuals report more sexual partners than both straight and gay individuals. Bisexuality doubles the pool of potential partners and is associated with higher overall sexual openness. Major psychology journals have found that bisexual women specifically report the highest average partner counts among all female sexual orientation categories. It's math plus openness.",
     yesExplanation:
-      "Bisexual women statistically report the highest average partner counts across all female orientation categories. The expanded dating pool and associated openness are significant factors.",
+      "Bisexual women statistically have the highest average partner counts across all female orientations. The expanded dating pool and the openness that comes with it are real factors.",
     noExplanation:
-      "She identifies as straight, which statistically correlates with a lower average number of partners compared to bisexual women.",
+      "She's straight — which statistically correlates with lower average partner counts compared to bisexual women.",
     notSureExplanation:
-      "If her sexuality is ambiguous to you, that ambiguity itself may be informative. People with clear boundaries tend to communicate them.",
+      "If her sexuality is ambiguous to you, that ambiguity might be informative bro. People with clear boundaries tend to communicate them clearly.",
   },
   {
     id: "r15",
@@ -223,11 +223,11 @@ export const redFlags = [
     weight: 4,
     icon: "🔍",
     context:
-      "When a woman is excessively preoccupied with whether men are secretly bisexual or gay, it often falls into classic BOP trickery — deflection and projection. This hyper-focus on male sexuality can signal a deeper distrust of men stemming from many negative experiences — which itself correlates with a high partner count. It can also indicate an oversexualization of relationships where she views everything through a sexual lens.",
+      "This is a controversial one but hear me out bro. When she's excessively preoccupied with whether men are secretly gay or bi, it's often classic BOP trickery — deflection and projection. This hyper-focus on male sexuality signals deep distrust of men from having tons of bad experiences — which itself correlates with a high body count. It can also mean she views everything through a sexual lens. If she's constantly suspicious of men's sexuality, she might be projecting her own sexual complexity.",
     yesExplanation:
-      "Her obsession with men's hidden sexuality suggests projection, deep distrust from many negative experiences, or an oversexualized worldview — all red flags.",
+      "Her obsession with men's hidden sexuality points to either projection, deep distrust from too many bad experiences, or an oversexualized worldview. All red flags bro.",
     noExplanation:
-      "She doesn't fixate on this topic — suggests she's not operating from a place of deep distrust or sexual preoccupation.",
+      "She doesn't fixate on this stuff — means she's not operating from a place of deep distrust or sexual preoccupation.",
     notSureExplanation:
       "This one's subtle. Listen for how often male sexuality comes up unprompted in her conversation.",
   },
@@ -238,13 +238,13 @@ export const redFlags = [
     weight: 8,
     icon: "🤥",
     context:
-      "Habitual lying is one of the most serious red flags. A woman who lies frequently and comfortably has developed that skill through practice — and one of the most common reasons people develop advanced deception skills is to manage multiple relationships, hide infidelity, or maintain contradictory narratives. Chronic lying is associated with dark triad personality traits (narcissism, Machiavellianism, psychopathy), all of which correlate with higher partner counts and exploitative relationship strategies.",
+      "Bro, this is one of the most serious flags on the whole list. A woman who lies frequently and comfortably developed that skill through PRACTICE. And one of the top reasons people get that good at lying is managing multiple relationships, hiding infidelity, or keeping contradictory stories straight across different groups. Chronic lying is also linked to dark triad traits — narcissism, manipulation, psychopathy — all of which correlate with more partners and exploitative relationship patterns. If she can lie to your face without blinking, she's done it many, many times before.",
     yesExplanation:
-      "A lying problem is one of the most serious indicators. Habitual deception is a practiced skill, often developed through managing multiple relationships. Major red flag.",
+      "Bro — a lying problem is one of the most serious indicators here. That's a PRACTICED skill, usually developed through managing multiple situations. Huge red flag.",
     noExplanation:
-      "She seems honest and transparent. Honesty suggests she isn't hiding a complicated past.",
+      "She seems honest and straight up. Honesty is one of the most important green flags — it means she's probably not hiding a complicated history.",
     notSureExplanation:
-      "If you're already questioning her honesty, trust that instinct. Liars are skilled — if you're catching inconsistencies, there are more you're missing.",
+      "If you're already questioning her honesty bro, trust that gut. Liars are skilled — if you're catching inconsistencies, there's way more you're missing.",
   },
   {
     id: "r17",
@@ -253,13 +253,13 @@ export const redFlags = [
     weight: 4,
     icon: "🎮",
     context:
-      "Context matters here. If she's genuinely passionate, that's one thing. But if she adopts male hobbies superficially — just enough to be visible in male-dominated spaces without deep engagement — it's likely an attention strategy. Being \"the girl who games\" or \"the girl into cars\" guarantees male attention and validation. Research on mating strategies shows women sometimes adopt cross-gender interests specifically to increase access to potential mates. Look for depth: is she genuinely skilled, or performing interest for an audience?",
+      "Context matters here bro. If she's genuinely passionate — actually skilled, actually knowledgeable — that's one thing. But if she's adopting male hobbies at a surface level just to be visible in male-dominated spaces? That's an attention play. Being \"the girl who games\" or \"the girl into cars\" guarantees male attention. Some women deliberately use cross-gender interests to maximize their access to men. Look for depth: does she actually know her stuff, or is she performing for an audience?",
     yesExplanation:
-      "She collects male hobbies that seem more performative than genuine — a deliberate strategy to maximize male attention in male-dominated spaces.",
+      "She collects male hobbies that seem more about being seen than being skilled — that's a deliberate play to maximize male attention in male-dominated spaces.",
     noExplanation:
-      "Her interests seem genuine and not strategically chosen to maximize male attention.",
+      "Her interests seem genuine and not strategically picked to maximize attention from dudes. That's authentic.",
     notSureExplanation:
-      "Test the depth: does she actually know her stuff, or does she just like being seen in the space?",
+      "Test the depth bro: does she actually know her stuff, or does she just like being the only girl in the room?",
   },
   {
     id: "r18",
@@ -268,13 +268,13 @@ export const redFlags = [
     weight: 6,
     icon: "💬",
     context:
-      "Frequent sexual innuendo is a strong signal of high sexual preoccupation and comfort with sexuality as a social tool. Research on sociosexual orientation shows that sexually unrestricted individuals are significantly more likely to use sexual language and innuendo in everyday interactions. It's a way of keeping sexuality at the forefront — testing boundaries, signaling availability, and maintaining a sexually charged atmosphere. If she can't go a conversation without making it suggestive, she's telling you where her mind lives.",
+      "Constant sexual innuendo in regular conversation is a strong signal bro. It shows high sexual preoccupation and comfort using sexuality as a social tool. Research shows sexually unrestricted people — more partners, more casual sex — are way more likely to use sexual language and innuendo casually. It's how she keeps sexuality at the front of every interaction — testing boundaries, signaling availability, keeping things charged. If she can't get through a conversation without making it suggestive, she's telling you where her mind lives.",
     yesExplanation:
-      "Constant sexual innuendo reveals where her mind naturally lives — strongly associated with high sociosexual orientation and comfort with sexuality as a social tool.",
+      "Constant sexual innuendo tells you exactly where her mind is at. Strongly associated with an unrestricted sexual orientation and comfort using sexuality as a tool. Flag it.",
     noExplanation:
-      "She keeps conversation appropriate and doesn't lean on sexual undertones.",
+      "She keeps conversation appropriate and doesn't lean on sexual undertones. Not using sexuality as a constant social weapon.",
     notSureExplanation:
-      "Think about your last few conversations. How often did things take a suggestive turn — and who steered it there?",
+      "Think about your last few conversations bro. How often did things get suggestive — and who steered it there?",
   },
   {
     id: "r19",
@@ -283,28 +283,28 @@ export const redFlags = [
     weight: 9,
     icon: "⚡",
     context:
-      "This is the most direct and heavily weighted indicator. A woman willing to have sex with someone she's just met in person has, by definition, a very low threshold for sexual intimacy with new people. Research on sociosexual orientation places this at the extreme end of \"unrestricted.\" The willingness to be that physically vulnerable with a near-stranger almost always indicates a pattern — this is unlikely to be her first time doing it. People comfortable sharing their body with someone they barely know tend to have done so many times before.",
+      "Bro — this is the heaviest hitter on the list for a reason. A woman who's down to have sex with someone she just met in person has, by definition, a very low bar for intimacy with new people. Research puts this at the extreme end of \"unrestricted\" sexual behavior. And I'ma keep it real: the willingness to be that vulnerable with a near-stranger almost always means it's a pattern. This is probably not her first time. People comfortable sharing their body with someone they barely know have done it many times before. This is the single strongest indicator there is.",
     yesExplanation:
-      "Sex on the first meeting is the strongest single indicator of an unrestricted sexual strategy. This almost always reflects a pattern, not a one-time exception.",
+      "Sex on the first meeting is THE strongest indicator of an unrestricted sexual strategy. Bro, this almost always reflects a pattern, not a one-time thing. This carries the most weight in your score.",
     noExplanation:
-      "She didn't sleep with you immediately — suggests a more selective approach to physical intimacy, the most direct positive signal possible.",
+      "She didn't give it up immediately — that suggests a more selective approach to physical intimacy. Honestly the most direct positive signal you can get.",
     notSureExplanation:
-      "If it's complicated or \"kind of\" happened, that ambiguity leans toward yes. Clear boundaries don't usually need explaining.",
+      "If it's \"complicated\" or \"kind of\" happened — bro, that ambiguity leans yes. Clear boundaries don't usually need explaining.",
   },
   {
     id: "r20",
     type: "red",
-    question: "Is she working in one of the top promiscuous professions (bartender, flight attendant, nurse, model/entertainer, or real estate)?",
+    question: "Is she in one of the top promiscuous professions (bartender, flight attendant, nurse, model/entertainer, real estate)?",
     weight: 5,
     icon: "💼",
     context:
-      "Research and large-scale surveys consistently identify certain professions as having significantly higher rates of infidelity and sexual partners. Bartenders operate in nightlife environments saturated with alcohol and flirtation. Flight attendants travel constantly with built-in anonymity and access to new cities. Nurses work long, high-stress shifts with intense emotional bonding among coworkers. Models and entertainers are immersed in industries that reward physical appearance and sexual appeal. Real estate agents have flexible schedules with private showings and a client-driven social life. It's not that these jobs make someone promiscuous — it's that the environments, schedules, and social dynamics of these professions create disproportionate opportunity.",
+      "Research and large-scale surveys keep identifying the same professions with higher rates of infidelity and more partners. Bartenders are in nightlife surrounded by alcohol and flirtation. Flight attendants travel constantly with built-in anonymity. Nurses work intense shifts with deep emotional bonding among coworkers. Models and entertainers are in industries that reward looks and sexual appeal. Real estate agents have flexible schedules and private one-on-one showings. It's not that the job makes her promiscuous — it's that these environments create way more opportunity than a regular 9-to-5.",
     yesExplanation:
-      "Her profession puts her in an environment with disproportionate opportunity — high travel, nightlife, flexible schedules, or appearance-driven culture. The research on these industries is consistent.",
+      "Her profession puts her in an environment with disproportionate opportunity — nightlife, travel, flexible schedules, or appearance-driven culture. The research on these industries is consistent bro.",
     noExplanation:
-      "Her profession doesn't fall into the high-risk category. One less environmental factor to consider.",
+      "Her job doesn't fall in the high-risk category. One less environmental factor to think about.",
     notSureExplanation:
-      "Think about her job's social dynamics: does it involve lots of travel, nightlife, flexible hours, or heavy interaction with strangers?",
+      "Think about her job's social dynamics: lots of travel? Nightlife? Flexible hours? Heavy interaction with strangers? Those are the patterns.",
   },
   {
     id: "r21",
@@ -313,13 +313,13 @@ export const redFlags = [
     weight: 7,
     icon: "🧠",
     context:
-      "This isn't about stigmatizing mental health — it's about understanding documented correlations. Borderline Personality Disorder (BPD) is characterized by impulsivity, fear of abandonment, and unstable relationships, and research shows individuals with BPD report significantly more sexual partners. Bipolar disorder's manic episodes often include hypersexuality as a clinical symptom. ADHD is associated with impulsivity and sensation-seeking, both strong predictors of higher partner counts. Multiple peer-reviewed studies across these diagnoses consistently find elevated numbers of sexual partners compared to the general population.",
+      "This isn't about stigmatizing mental health bro — it's about understanding documented correlations. BPD is characterized by impulsivity, fear of abandonment, and unstable relationships — people with BPD report significantly more partners. Bipolar disorder's manic episodes literally include hypersexuality as a clinical symptom. ADHD is tied to impulsivity and sensation-seeking, both strong predictors of higher body counts. Multiple studies across all three diagnoses consistently find elevated partner numbers. It's clinical data, not judgment.",
     yesExplanation:
-      "These specific diagnoses have well-documented correlations with higher partner counts — through impulsivity, hypersexuality during episodes, or sensation-seeking behavior. This is clinical research, not judgment.",
+      "These specific diagnoses have well-documented links to higher partner counts — impulsivity, hypersexuality during episodes, sensation-seeking. It's clinical research bro, not a moral judgment.",
     noExplanation:
-      "No relevant mental health diagnoses that the research links to elevated partner counts. One less clinical risk factor.",
+      "No relevant diagnoses that research links to elevated partner counts. One less clinical risk factor on the board.",
     notSureExplanation:
-      "Mental health history often comes out over time. If she shows signs of extreme impulsivity, mood swings, or fear of abandonment, it may be worth understanding why.",
+      "Mental health history comes out over time. If she shows extreme impulsivity, wild mood swings, or intense fear of abandonment — there might be something underneath.",
   },
 ];
 
@@ -331,13 +331,13 @@ export const greenFlags = [
     weight: 5,
     icon: "📚",
     context:
-      "Regular reading — particularly long-form books — is associated with higher cognitive ability, patience, and a preference for depth over stimulation. Research links higher IQ and intellectual engagement to lower partner counts, as individuals with higher cognitive ability tend to employ more deliberate, long-term mating strategies. A woman who reads regularly is exercising delayed gratification and focused attention — the opposite of the impulsive, sensation-seeking profile associated with promiscuity.",
+      "Regular reading — actual books, not Instagram captions — is linked to higher cognitive ability, patience, and preference for depth over cheap stimulation. Research connects higher IQ and intellectual engagement to lower partner counts. Smart women tend to use more deliberate, long-term mating strategies. A girl who reads regularly is exercising delayed gratification and focused attention — that's the opposite of the impulsive, sensation-seeking profile associated with being a bop.",
     yesExplanation:
-      "Regular reading signals intellectual engagement, patience, and preference for depth — traits associated with more selective, deliberate relationship choices.",
+      "She reads real books regularly — that signals intellectual depth, patience, and preference for substance. Those traits track with more selective, deliberate relationship choices. Green flag bro.",
     noExplanation:
-      "She's not a reader. This doesn't seal the deal, but it removes one indicator of the deliberate, long-term oriented personality type.",
+      "She's not a reader. Doesn't seal the deal either way, but it removes one indicator of that deliberate, long-term-oriented personality type.",
     notSureExplanation:
-      "Does she talk about books? Does she have a bookshelf? The answer tells you about her attention span and what stimulates her.",
+      "Does she talk about books? Have a bookshelf? The answer tells you about her attention span and what actually stimulates her.",
   },
   {
     id: "g2",
@@ -346,13 +346,13 @@ export const greenFlags = [
     weight: 8,
     icon: "👨‍👧",
     context:
-      "This is one of the most robust findings in relationship psychology. Women with strong, positive father-daughter relationships consistently report fewer sexual partners, later sexual debut, and more stable romantic relationships. A present, engaged father provides a model for male behavior and healthy attachment, reducing the likelihood of seeking male validation through sexual relationships. The absence of a father figure is one of the single strongest predictors of early and frequent sexual activity in women.",
+      "Bro, this is one of the most solid findings in ALL of relationship psychology. Women with strong, positive father-daughter relationships consistently report fewer partners, later first sexual experience, and more stable relationships. A present father provides a model for how men should treat her AND healthy attachment. Without that? She's way more likely to seek male validation through sex. The absence of a father figure is literally one of the single strongest predictors of early and frequent sexual activity in women.",
     yesExplanation:
-      "A strong father-daughter relationship is one of the most powerful protective factors against promiscuity. She had a healthy model for male relationships from the start.",
+      "A strong relationship with her dad is one of the most powerful protective factors there is. She had a healthy model for male relationships from the jump. Major green flag, bro.",
     noExplanation:
-      "Absence of a healthy paternal relationship is one of the strongest predictors of seeking male validation through sexual relationships. Significant finding.",
+      "No healthy dad relationship — bro, this is one of the strongest predictors of seeking male validation through sexual relationships. That's a big deal.",
     notSureExplanation:
-      "Pay attention to how she talks about her dad — or whether she avoids the topic entirely. Both are informative.",
+      "Pay attention to how she talks about her dad — or whether she dodges the topic entirely. Both tell you a lot.",
   },
   {
     id: "g3",
@@ -361,13 +361,13 @@ export const greenFlags = [
     weight: 6,
     icon: "🙏",
     context:
-      "Religiosity is one of the most consistent predictors of sexual restraint across decades of research. Religious women report fewer sexual partners, later first sexual experiences, and stronger preferences for committed relationships. This isn't just about rules — it's about having an internalized moral framework and community accountability structure that reinforces long-term mating strategies. The discipline aspect matters: actively practicing faith (attending services, prayer routines) is a stronger predictor than simply identifying as religious.",
+      "Religiosity is one of the most consistent predictors of sexual restraint across decades of research bro. Religious women report fewer partners, later first experiences, and stronger preferences for committed relationships. It's not just rules — it's an internalized moral framework plus community accountability that reinforces long-term thinking. Key word is DISCIPLINE though: actually practicing faith (going to services, daily prayer) is a stronger predictor than just saying \"I'm spiritual\" on her Hinge profile.",
     yesExplanation:
-      "Active religiosity or spiritual discipline is one of the most consistent predictors of lower partner counts and commitment-oriented relationship behavior.",
+      "Active religious or spiritual discipline is one of the most consistent predictors of lower partner counts and commitment-oriented behavior. Solid green flag.",
     noExplanation:
-      "She's not religious or spiritually disciplined — removes one of the most reliable protective factors against unrestricted sexual behavior.",
+      "She's not religious or spiritually disciplined — removes one of the most reliable protective factors against unrestricted behavior.",
     notSureExplanation:
-      "There's a difference between 'spiritual' as an Instagram aesthetic and genuine disciplined practice. Look for consistency and depth.",
+      'There\'s a big difference between "spiritual" as an aesthetic and actual disciplined practice bro. Look for consistency and depth, not just vibes.',
   },
   {
     id: "g4",
@@ -376,13 +376,13 @@ export const greenFlags = [
     weight: 6,
     icon: "🎯",
     context:
-      "Goal-oriented behavior is a hallmark of high conscientiousness — the personality trait most strongly associated with sexual restraint. Women who set long-term goals and systematically pursue them are demonstrating delayed gratification, self-regulation, and future-orientation. These are K-selected traits: prioritizing quality over quantity, investment over impulse. Research consistently shows that conscientious, future-oriented individuals have fewer sexual partners because they weigh consequences and prioritize long-term outcomes over momentary pleasure.",
+      "Goal-oriented behavior is a hallmark of high conscientiousness — the personality trait most strongly linked to sexual restraint. A woman who sets long-term goals and actually grinds toward them is showing you delayed gratification, self-regulation, and future-orientation. These are K-selected traits bro: quality over quantity, investment over impulse. Conscientious, future-oriented people have fewer partners because they think about consequences and prioritize long-term outcomes over momentary pleasure.",
     yesExplanation:
-      "Long-term goal pursuit signals high conscientiousness and future-orientation — K-selected traits strongly associated with fewer sexual partners and more committed relationships.",
+      "She's got real goals and actually works toward them — that's high conscientiousness and future-orientation. These traits are strongly tied to fewer partners and more committed relationships. She's built different.",
     noExplanation:
-      "Lack of long-term goals suggests lower conscientiousness and possibly more present-oriented decision-making, which correlates with less sexual restraint.",
+      "No real long-term direction suggests lower conscientiousness and more present-focused decision-making, which correlates with less restraint.",
     notSureExplanation:
-      "Ask her where she sees herself in 5 years. The specificity and conviction of her answer tells you a lot about her orientation.",
+      "Ask her where she sees herself in 5 years bro. The specificity and conviction of her answer tells you everything about her orientation.",
   },
   {
     id: "g5",
@@ -391,13 +391,13 @@ export const greenFlags = [
     weight: 7,
     icon: "💍",
     context:
-      "Relationship history is one of the most direct indicators of mating strategy. Women who have had a small number of long-duration relationships are demonstrating a classic K-selected pattern: high investment, pair bonding, and commitment orientation. This pattern is associated with secure attachment style, emotional stability, and the ability to maintain deep connections over time. It's the behavioral opposite of serial short-term relationships, which indicate an unrestricted sociosexual orientation.",
+      "Relationship history is one of the most direct indicators of mating strategy bro. A woman with a small number of long-duration relationships is showing you a K-selected pattern: high investment, real pair bonding, genuine commitment. This pattern comes from secure attachment, emotional stability, and the ability to go deep. It's the behavioral opposite of a revolving door of short-term flings.",
     yesExplanation:
-      "Few, long relationships signal a K-selected mating strategy — high investment, strong pair bonding, and genuine commitment orientation. One of the best direct indicators.",
+      "Few, long relationships — bro, that's the K-selected playbook. High investment, real bonding, genuine commitment. One of the best direct indicators you can find.",
     noExplanation:
-      "A pattern of many short relationships or no long-term relationships suggests a more unrestricted approach to relationships and intimacy.",
+      "A pattern of many short relationships or no long-term ones at all suggests a more unrestricted approach. Something to think about.",
     notSureExplanation:
-      "Her relationship history will come out in conversation. Listen for how she talks about exes — duration, depth, and how they ended all matter.",
+      "Her relationship history will come out in conversation. Listen for how she talks about exes — how long they lasted, how deep they went, and how they ended.",
   },
   {
     id: "g6",
@@ -406,13 +406,13 @@ export const greenFlags = [
     weight: 5,
     icon: "💰",
     context:
-      "Financial discipline is a strong proxy for conscientiousness and impulse control — both of which are protective factors against promiscuity. Research shows that individuals who are good with money, save consistently, and avoid impulsive spending score higher on self-regulation measures that predict fewer sexual partners. Financial responsibility requires the same delayed gratification that characterizes sexually restricted mating strategies. If she can say no to a purchase, she can say no to a person.",
+      "Financial discipline is a strong proxy for conscientiousness and impulse control bro — and both of those protect against promiscuity. People who are good with money and can resist impulse purchases score higher on the exact same self-regulation measures that predict fewer partners. Financial responsibility requires delayed gratification — the same thing that drives sexually restricted mating strategies. If she can say no to a purchase, she can say no to a person.",
     yesExplanation:
-      "Financial discipline signals strong impulse control and conscientiousness — the same self-regulation traits that predict more selective sexual behavior.",
+      "She's smart with her money — that signals the same impulse control and conscientiousness that predicts selective sexual behavior. Green flag bro.",
     noExplanation:
-      "Financial irresponsibility suggests impulsivity and poor self-regulation, which are associated with less selective sexual behavior.",
+      "Financial recklessness suggests impulsivity and poor self-regulation — the same traits tied to less selective behavior.",
     notSureExplanation:
-      "Look at her lifestyle versus her income. Does she live within her means, or is she always chasing the next purchase?",
+      "Look at her lifestyle versus her income bro. Does she live within her means, or is she always chasing the next thing?",
   },
   {
     id: "g7",
@@ -421,13 +421,13 @@ export const greenFlags = [
     weight: 4,
     icon: "🍳",
     context:
-      "Domestic investment — cooking, maintaining a home, building a comfortable living space — signals nesting behavior and long-term orientation. Research on life history theory shows that women who invest in domestic skills are prioritizing stability and pair bonding over social signaling and novelty-seeking. It's a K-selected trait: investing energy in building a home rather than maintaining a social presence. Women who cook at home also tend to spend less time in bars, restaurants, and nightlife environments where casual encounters are more likely.",
+      "Domestic investment — cooking, keeping a clean place, building a real home — signals nesting behavior and long-term orientation. Women who invest in domestic skills are prioritizing stability and building something over social signaling and chasing novelty. It's a K-selected trait bro: putting energy into a home instead of maintaining a social media presence and party lifestyle. Plus she's spending less time in bars and clubs where hookups happen.",
     yesExplanation:
-      "Domestic investment signals nesting behavior and long-term orientation — she's building a home rather than maintaining a party lifestyle.",
+      "She invests in her home and domestic skills — that's nesting behavior and long-term orientation. She's building, not partying. Green flag.",
     noExplanation:
-      "No interest in domestic skills could mean she's more socially oriented than home-oriented, which shifts where she spends her time and energy.",
+      "No interest in domestic life could mean she's more socially oriented than home-oriented, which shifts where she spends her time and energy.",
     notSureExplanation:
-      "Does she ever invite you over for a home-cooked meal, or is every date at a bar or restaurant? The pattern is telling.",
+      "Does she ever cook for you or invite you over to her place? Or is every hangout at a bar or restaurant? The pattern is telling bro.",
   },
   {
     id: "g8",
@@ -436,13 +436,13 @@ export const greenFlags = [
     weight: 5,
     icon: "📵",
     context:
-      "High social media usage is consistently linked to attention-seeking behavior, narcissistic traits, and higher numbers of sexual partners in research. Conversely, women with low social media presence are opting out of the validation economy — they don't need constant external affirmation of their attractiveness or social status. Low social media usage correlates with higher self-esteem, lower narcissism, and more secure attachment styles — all protective factors against promiscuity.",
+      "High social media usage is consistently linked to attention-seeking, narcissistic traits, and more partners in research. On the flip side, women with low social media presence have opted out of the validation economy — they don't need strangers double-tapping to feel good about themselves. Low usage correlates with higher self-esteem, lower narcissism, and more secure attachment. All protective factors. If she doesn't need the likes, she doesn't need the attention bro.",
     yesExplanation:
-      "Low social media usage signals she doesn't need constant external validation — associated with higher self-esteem, lower narcissism, and more secure attachment.",
+      "Low social media means she's not chasing validation from strangers — linked to higher self-esteem, lower narcissism, and secure attachment. Big green flag bro.",
     noExplanation:
-      "High social media presence and engagement is linked to attention-seeking and narcissistic traits that correlate with higher partner counts.",
+      "Heavy social media presence and engagement is tied to attention-seeking and narcissistic traits that track with higher partner counts.",
     notSureExplanation:
-      "Check her screen time habits. Is she constantly posting, scrolling, and checking likes, or does she treat her phone as a tool?",
+      "Check her screen time habits bro. Is she constantly posting, scrolling, and counting likes, or does she treat her phone like a tool?",
   },
   {
     id: "g9",
@@ -451,13 +451,13 @@ export const greenFlags = [
     weight: 6,
     icon: "👭",
     context:
-      "Women who maintain long-term, stable female friendships demonstrate emotional maturity, loyalty, and the ability to sustain deep relationships — all traits associated with committed, low-partner-count lifestyles. Research shows that strong same-sex friendships are protective against risky sexual behavior because they provide emotional support and accountability. A woman who can keep close female friends for years has the interpersonal skills and emotional stability that predict relationship success.",
+      "Women who keep long-term, stable female friendships are showing you emotional maturity, loyalty, and the ability to maintain deep relationships — all traits tied to committed, low-body-count lifestyles. Strong same-sex friendships are actually protective against risky sexual behavior because they provide emotional support and accountability. A girl who's kept the same close friends for years has the interpersonal skills and emotional stability that predict relationship success. If she can't keep female friends though? That usually means jealousy, drama, or instability bro.",
     yesExplanation:
-      "Stable female friendships signal emotional maturity, loyalty, and interpersonal skills — all protective factors against promiscuity and predictors of relationship success.",
+      "Stable female friendships = emotional maturity, loyalty, and real interpersonal skills. All protective factors against promiscuity and predictors of relationship success. Green flag bro.",
     noExplanation:
-      "Inability to maintain female friendships often signals interpersonal issues — jealousy, drama, or instability — that are associated with riskier sexual behavior.",
+      "Can't keep female friends? That often signals jealousy, drama, or emotional instability — all associated with riskier sexual behavior.",
     notSureExplanation:
-      "How does she talk about her friends? Long-time besties or a rotating cast? The stability of her friendships mirrors her relationship patterns.",
+      "How does she talk about her friends? Long-time besties or a rotating cast of characters? The stability of her friendships mirrors her relationship patterns bro.",
   },
   {
     id: "g10",
@@ -466,13 +466,13 @@ export const greenFlags = [
     weight: 5,
     icon: "🧘",
     context:
-      "Introversion is associated with lower partner counts across virtually all research on personality and sexual behavior. Introverts are less driven by social stimulation, less likely to seek novelty through new people, and more comfortable with solitude — meaning they don't need external validation to feel fulfilled. Women who are genuinely comfortable being alone aren't driven to fill emotional voids with new partners. This is a K-selected trait: quality of connection matters more than quantity of social interaction.",
+      "Introversion is linked to lower partner counts across basically all the research bro. Introverts aren't driven by social stimulation, don't seek novelty through new people, and are genuinely comfortable solo — meaning they don't need external validation to feel whole. A woman who's good being alone isn't driven to fill emotional voids with new partners. Quality of connection over quantity of interaction — that's K-selected behavior.",
     yesExplanation:
-      "Introversion and comfort with solitude signal she doesn't need constant social stimulation or external validation — strongly associated with fewer sexual partners.",
+      "She's introverted or genuinely comfortable alone — that means she doesn't need constant stimulation or validation from other people. Strongly linked to fewer partners. Green flag.",
     noExplanation:
-      "High extroversion without other balancing traits is one of the strongest predictors of higher partner counts in personality research.",
+      "High extroversion without balancing traits is one of the strongest predictors of higher partner counts in personality research.",
     notSureExplanation:
-      "Does she need plans every weekend or is she content with a quiet night in? How she recharges tells you about her orientation.",
+      "Does she need plans every weekend or is she cool with a quiet night in? How she recharges tells you about her whole orientation bro.",
   },
   {
     id: "g11",
@@ -481,13 +481,13 @@ export const greenFlags = [
     weight: 4,
     icon: "📝",
     context:
-      "Genuine self-reflective practices — journaling, meditation, therapy for growth — indicate high self-awareness, emotional intelligence, and intentionality. Research links these traits to more deliberate decision-making in relationships and lower impulsivity. A woman who regularly examines her own thoughts and behaviors is less likely to act on impulse and more likely to be intentional about who she lets into her life. Self-awareness is a protective factor — people who understand their own patterns are less likely to repeat destructive ones.",
+      "Real self-reflective practices — journaling, meditation, therapy for actual growth — indicate high self-awareness, emotional intelligence, and intentionality. These traits lead to more deliberate decision-making and lower impulsivity. A woman who regularly examines her own thoughts and patterns is less likely to act on impulse and more intentional about who she lets in. Self-awareness is protective bro — people who understand their patterns are less likely to repeat destructive ones.",
     yesExplanation:
-      "Self-reflective practices signal high emotional intelligence and intentionality — she's deliberate about her choices, which is protective against impulsive sexual behavior.",
+      "She does real self-reflection — journaling, meditation, actual growth work. That signals emotional intelligence and intentionality. She's deliberate about her choices. Green flag.",
     noExplanation:
-      "Lack of self-reflection means less awareness of personal patterns, which can lead to repeated impulsive decisions in relationships.",
+      "No self-reflection means less awareness of personal patterns, which can lead to repeated impulsive decisions in relationships.",
     notSureExplanation:
-      "Does she talk about personal growth with specifics, or just aesthetics? Real self-reflection changes behavior — look for evidence.",
+      "Does she talk about personal growth with actual specifics, or just the aesthetics? Real self-reflection changes behavior bro — look for evidence.",
   },
   {
     id: "g12",
@@ -496,13 +496,13 @@ export const greenFlags = [
     weight: 6,
     icon: "🏠",
     context:
-      "Orientation toward family and long-term stability is the hallmark of a K-selected reproductive strategy — high investment, careful mate selection, and prioritization of quality over quantity. Women who genuinely value family (not just performatively) tend to have fewer sexual partners because their mating decisions are filtered through a long-term lens. Research consistently shows that family-oriented women report lower sociosexual orientation scores and more committed relationship histories.",
+      "Family orientation and desire for long-term stability is the hallmark of K-selected mating strategy — careful mate selection, high investment, quality over quantity. Women who genuinely value family (not performatively) tend to have fewer partners because every decision is filtered through a long-term lens. Research consistently shows family-oriented women have lower sociosexual orientation scores and more committed relationship histories. If she's really about building something, she's not out here wasting time bro.",
     yesExplanation:
-      "Family orientation and desire for stability signal a K-selected strategy — careful mate selection and long-term thinking. One of the strongest green flags available.",
+      "She's family-oriented and wants real stability — that's K-selected all the way. Careful mate selection, long-term thinking. One of the strongest green flags you can find bro.",
     noExplanation:
-      "No strong family orientation or future stability goals suggests she may be more present-oriented in her relationship decisions.",
+      "No strong family orientation or stability goals — suggests she may be more present-focused in her relationship decisions.",
     notSureExplanation:
-      "Listen for how she talks about the future. Does she mention family, settling down, building something — or does she avoid long-term planning?",
+      "Listen for how she talks about the future bro. Does she mention family, settling down, building something? Or does she dodge long-term planning?",
   },
 ];
 
