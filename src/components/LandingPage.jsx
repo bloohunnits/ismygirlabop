@@ -34,7 +34,7 @@ export default function LandingPage({ onStart }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          The science is real. The questions are real.
+          The questions are real. The answers are realer.
           <br />
           We're just giving you the game, bro.
         </motion.p>
@@ -45,7 +45,7 @@ export default function LandingPage({ onStart }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.8 }}
         >
-          No shame. Just science. Every question is backed by real
+          No shame. No BS. Every question is backed by real
           research. Red flags and green flags. We just want you to
           see what's in front of you bro.
         </motion.p>

@@ -24,7 +24,7 @@ function getVerdict(score) {
     return {
       label: "High Risk 🔴",
       color: "#f44336",
-      desc: "I'm not gonna sugarcoat it bro. Multiple strong red flags are popping and the green flags are nowhere to be found. The pattern here is consistent with a high body count. The science on these indicators is solid. She's likely a bop. Move accordingly.",
+      desc: "I'm not gonna sugarcoat it bro. Multiple strong red flags are popping and the green flags are nowhere to be found. The pattern here is consistent with a high body count. The research on these indicators is solid. She's likely a bop. Move accordingly.",
     };
   return {
     label: "Certified Bop 💀",
@@ -428,7 +428,7 @@ export default function Results({ answers, questions, onRestart, onHome }) {
         transition={{ delay: 1.4 }}
       >
         <h3 className="section-title">📋 Detailed Breakdown</h3>
-        <p className="section-subtitle">Tap any item for the science behind it</p>
+        <p className="section-subtitle">Tap any item for the full breakdown</p>
 
         {questions.map((q, i) => {
           const ans = answers[i];
@@ -496,7 +496,7 @@ export default function Results({ answers, questions, onRestart, onHome }) {
                     <p>{explanation}</p>
                   </div>
                   <div className="detail-context">
-                    <strong>📖 The Science</strong>
+                    <strong>📖 The Research</strong>
                     <p>{q.context}</p>
                   </div>
                 </motion.div>
