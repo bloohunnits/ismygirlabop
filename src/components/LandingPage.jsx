@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function LandingPage({ onStart }) {
   return (
@@ -73,6 +74,17 @@ export default function LandingPage({ onStart }) {
           <span>⏱️ ~2 Minutes</span>
         </motion.div>
       </div>
+
+      <motion.div
+        className="landing-articles-link"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.4 }}
+      >
+        <Link to="/articles" className="articles-link">
+          📖 Read the Science Behind the Quiz
+        </Link>
+      </motion.div>
 
       <div className="landing-bg-glow" />
     </motion.div>
