@@ -11,7 +11,7 @@ export default function ArticleList() {
     window.scrollTo(0, 0);
 
     return () => {
-      document.title = "Is My Girl A Bop? — Science-Backed Assessment";
+      document.title = "Is My Girl A Bop? — Is My Girl A Bop?";
     };
   }, []);
   return (

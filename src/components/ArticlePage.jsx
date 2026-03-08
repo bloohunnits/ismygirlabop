@@ -44,7 +44,7 @@ export default function ArticlePage() {
     }
 
     return () => {
-      document.title = "Is My Girl A Bop? — Science-Backed Assessment";
+      document.title = "Is My Girl A Bop? — Is My Girl A Bop?";
     };
   }, [article]);
 
