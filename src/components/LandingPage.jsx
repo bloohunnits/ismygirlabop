@@ -33,9 +33,9 @@ export default function LandingPage({ onStart }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          12 science-backed questions. Real answers.
+          The science is real. The questions are real.
           <br />
-          No sugarcoating.
+          We're just giving you the game, bro.
         </motion.p>
 
         <motion.p
@@ -46,7 +46,7 @@ export default function LandingPage({ onStart }) {
         >
           Look bro — this isn't about shaming anybody. This is about giving you
           the game. Every question here is backed by actual research — personality
-          psychology, disgust sensitivity, sociosexual orientation, K-selection
+          psychology, disgust sensitivity, sociosexual orientation, r/K selection
           theory. Red flags AND green flags. We just want you to see what's in
           front of you.
         </motion.p>

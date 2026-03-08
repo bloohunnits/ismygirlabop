@@ -376,7 +376,7 @@ export const greenFlags = [
     weight: 6,
     icon: "🎯",
     context:
-      "Goal-oriented behavior is a hallmark of high conscientiousness — the personality trait most strongly linked to sexual restraint. A woman who sets long-term goals and actually grinds toward them is showing you delayed gratification, self-regulation, and future-orientation. These are K-selected traits bro: quality over quantity, investment over impulse. Conscientious, future-oriented people have fewer partners because they think about consequences and prioritize long-term outcomes over momentary pleasure.",
+      "Goal-oriented behavior is a hallmark of high conscientiousness — the personality trait most strongly linked to sexual restraint. A woman who sets long-term goals and actually grinds toward them is showing you delayed gratification, self-regulation, and future-orientation. In r/K selection theory, these are K-selected traits bro: quality over quantity, investment over impulse. Conscientious, future-oriented people have fewer partners because they think about consequences and prioritize long-term outcomes over momentary pleasure.",
     yesExplanation:
       "She's got real goals and actually works toward them — that's high conscientiousness and future-orientation. These traits are strongly tied to fewer partners and more committed relationships. She's built different.",
     noExplanation:
@@ -391,9 +391,9 @@ export const greenFlags = [
     weight: 7,
     icon: "💍",
     context:
-      "Relationship history is one of the most direct indicators of mating strategy bro. A woman with a small number of long-duration relationships is showing you a K-selected pattern: high investment, real pair bonding, genuine commitment. This pattern comes from secure attachment, emotional stability, and the ability to go deep. It's the behavioral opposite of a revolving door of short-term flings.",
+      "Relationship history is one of the most direct indicators of mating strategy bro. A woman with a small number of long-duration relationships is showing you a K-selected pattern from r/K selection theory: high investment, real pair bonding, genuine commitment. This pattern comes from secure attachment, emotional stability, and the ability to go deep. It's the behavioral opposite of a revolving door of short-term flings.",
     yesExplanation:
-      "Few, long relationships — bro, that's the K-selected playbook. High investment, real bonding, genuine commitment. One of the best direct indicators you can find.",
+      "Few, long relationships — bro, that's the K-selected playbook straight out of r/K selection theory. High investment, real bonding, genuine commitment. One of the best direct indicators you can find.",
     noExplanation:
       "A pattern of many short relationships or no long-term ones at all suggests a more unrestricted approach. Something to think about.",
     notSureExplanation:
@@ -421,7 +421,7 @@ export const greenFlags = [
     weight: 4,
     icon: "🍳",
     context:
-      "Domestic investment — cooking, keeping a clean place, building a real home — signals nesting behavior and long-term orientation. Women who invest in domestic skills are prioritizing stability and building something over social signaling and chasing novelty. It's a K-selected trait bro: putting energy into a home instead of maintaining a social media presence and party lifestyle. Plus she's spending less time in bars and clubs where hookups happen.",
+      "Domestic investment — cooking, keeping a clean place, building a real home — signals nesting behavior and long-term orientation. Women who invest in domestic skills are prioritizing stability and building something over social signaling and chasing novelty. It's a K-selected trait (r/K selection theory) bro: putting energy into a home instead of maintaining a social media presence and party lifestyle. Plus she's spending less time in bars and clubs where hookups happen.",
     yesExplanation:
       "She invests in her home and domestic skills — that's nesting behavior and long-term orientation. She's building, not partying. Green flag.",
     noExplanation:
@@ -466,7 +466,7 @@ export const greenFlags = [
     weight: 5,
     icon: "🧘",
     context:
-      "Introversion is linked to lower partner counts across basically all the research bro. Introverts aren't driven by social stimulation, don't seek novelty through new people, and are genuinely comfortable solo — meaning they don't need external validation to feel whole. A woman who's good being alone isn't driven to fill emotional voids with new partners. Quality of connection over quantity of interaction — that's K-selected behavior.",
+      "Introversion is linked to lower partner counts across basically all the research bro. Introverts aren't driven by social stimulation, don't seek novelty through new people, and are genuinely comfortable solo — meaning they don't need external validation to feel whole. A woman who's good being alone isn't driven to fill emotional voids with new partners. Quality of connection over quantity of interaction — that's K-selected behavior from r/K selection theory.",
     yesExplanation:
       "She's introverted or genuinely comfortable alone — that means she doesn't need constant stimulation or validation from other people. Strongly linked to fewer partners. Green flag.",
     noExplanation:
@@ -496,9 +496,9 @@ export const greenFlags = [
     weight: 6,
     icon: "🏠",
     context:
-      "Family orientation and desire for long-term stability is the hallmark of K-selected mating strategy — careful mate selection, high investment, quality over quantity. Women who genuinely value family (not performatively) tend to have fewer partners because every decision is filtered through a long-term lens. Research consistently shows family-oriented women have lower sociosexual orientation scores and more committed relationship histories. If she's really about building something, she's not out here wasting time bro.",
+      "Family orientation and desire for long-term stability is the hallmark of a K-selected mating strategy (r/K selection theory) — careful mate selection, high investment, quality over quantity. Women who genuinely value family (not performatively) tend to have fewer partners because every decision is filtered through a long-term lens. Research consistently shows family-oriented women have lower sociosexual orientation scores and more committed relationship histories. If she's really about building something, she's not out here wasting time bro.",
     yesExplanation:
-      "She's family-oriented and wants real stability — that's K-selected all the way. Careful mate selection, long-term thinking. One of the strongest green flags you can find bro.",
+      "She's family-oriented and wants real stability — that's K-selected all the way (r/K selection theory). Careful mate selection, long-term thinking. One of the strongest green flags you can find bro.",
     noExplanation:
       "No strong family orientation or stability goals — suggests she may be more present-focused in her relationship decisions.",
     notSureExplanation:
