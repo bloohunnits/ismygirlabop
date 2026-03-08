@@ -15,7 +15,7 @@ export default function LandingPage({ onStart }) {
           animate={{ scale: 1 }}
           transition={{ type: "spring", delay: 0.2, stiffness: 200 }}
         >
-          <span>🔬</span>
+          <img src="/icon.svg" alt="Is My Girl A Bop?" className="landing-logo" />
         </motion.div>
 
         <motion.h1
