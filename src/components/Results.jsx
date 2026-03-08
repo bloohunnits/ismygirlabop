@@ -1,36 +1,35 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import questions from "../data/questions";
 
 function getVerdict(score) {
   if (score <= 15)
     return {
       label: "She's Clean 💚",
       color: "#00e676",
-      desc: "Based on the indicators assessed, she shows almost none of the behavioral patterns associated with a high partner count. She appears to be low-risk and relationship-oriented. She's not a bop.",
+      desc: "Based on the indicators assessed, she shows almost none of the behavioral red flags and multiple green flags associated with relationship-oriented women. She appears to be low-risk and genuinely commitment-minded. She's not a bop.",
     };
   if (score <= 30)
     return {
       label: "Mostly Clear 💛",
       color: "#ffeb3b",
-      desc: "She shows a few minor indicators, but nothing alarming. Some of these could be personality quirks rather than red flags. Stay aware, but don't overthink it. Probably not a bop.",
+      desc: "She shows a few minor red flags but also several positive indicators. Some of these could be personality quirks rather than real warnings. Stay aware, but don't overthink it. Probably not a bop.",
     };
   if (score <= 50)
     return {
       label: "Proceed With Caution 🟠",
       color: "#ff9800",
-      desc: "She's triggering a moderate number of behavioral indicators. Any one of these alone might not mean much, but the combination creates a pattern worth paying attention to. Have honest conversations and keep your eyes open. She might be a bop.",
+      desc: "She's triggering a moderate number of red flags without enough green flags to offset them. Any one alone might not mean much, but the combination creates a pattern worth paying attention to. Have honest conversations and keep your eyes open. She might be a bop.",
     };
   if (score <= 70)
     return {
       label: "High Risk 🔴",
       color: "#f44336",
-      desc: "Multiple strong indicators are present. The behavioral pattern here is consistent with someone who has had a significant number of sexual partners. The science behind these indicators is well-established. She's likely a bop.",
+      desc: "Multiple strong red flags are present and green flags are scarce. The behavioral pattern here is consistent with someone who has had a significant number of sexual partners. The science behind these indicators is well-established. She's likely a bop.",
     };
   return {
     label: "Certified Bop 💀",
     color: "#ff1744",
-    desc: "She's triggering nearly every major indicator on this assessment. The combined weight of these behavioral signals leaves very little room for doubt. The research is overwhelming — this pattern doesn't emerge by accident. She is, by every measurable standard, a bop.",
+    desc: "She's triggering nearly every major red flag with almost no protective green flags. The combined weight of these behavioral signals leaves very little room for doubt. The research is overwhelming — this pattern doesn't emerge by accident. She is, by every measurable standard, a bop.",
   };
 }
 
@@ -54,19 +53,47 @@ function AnimatedScore({ target }) {
   return <span>{displayed}</span>;
 }
 
-export default function Results({ answers }) {
+export default function Results({ answers, questions, onRestart }) {
   const [expandedId, setExpandedId] = useState(null);
 
   // Calculate score
-  const maxWeight = questions.reduce((sum, q) => sum + q.weight, 0);
-  const rawScore = questions.reduce((sum, q, i) => {
-    return sum + (answers[i] ? q.weight : 0);
-  }, 0);
-  const score = Math.round((rawScore / maxWeight) * 100);
+  // Red flags: yes=full weight toward bop, not_sure=half, no=0
+  // Green flags: yes=full weight AGAINST bop, not_sure=half, no=0
+  const maxScore = questions.reduce((sum, q) => sum + q.weight, 0);
+
+  let redScore = 0;
+  let greenScore = 0;
+
+  questions.forEach((q, i) => {
+    const ans = answers[i];
+    const mult = ans === "yes" ? 1 : ans === "not_sure" ? 0.5 : 0;
+
+    if (q.type === "red") {
+      redScore += q.weight * mult;
+    } else {
+      greenScore += q.weight * mult;
+    }
+  });
+
+  // Final score: red flags push up, green flags push down
+  const maxRed = questions.filter((q) => q.type === "red").reduce((s, q) => s + q.weight, 0);
+  const maxGreen = questions.filter((q) => q.type === "green").reduce((s, q) => s + q.weight, 0);
+
+  const redPct = maxRed > 0 ? redScore / maxRed : 0;
+  const greenPct = maxGreen > 0 ? greenScore / maxGreen : 0;
+
+  // Score: red% pushes toward 100, green% pushes toward 0
+  const rawScore = (redPct * 100) - (greenPct * 50);
+  const score = Math.max(0, Math.min(100, Math.round(rawScore)));
+
   const verdict = getVerdict(score);
 
-  const yesQuestions = questions.filter((_, i) => answers[i]);
-  const noQuestions = questions.filter((_, i) => !answers[i]);
+  const redFlagCount = questions.filter(
+    (q, i) => q.type === "red" && answers[i] === "yes"
+  ).length;
+  const greenFlagCount = questions.filter(
+    (q, i) => q.type === "green" && answers[i] === "yes"
+  ).length;
 
   return (
     <motion.div
@@ -74,6 +101,19 @@ export default function Results({ answers }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
+      {/* Floating restart */}
+      <motion.button
+        className="floating-restart"
+        onClick={onRestart}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.97 }}
+      >
+        ↻ Start Over
+      </motion.button>
+
       {/* Score Hero */}
       <motion.div
         className="score-hero"
@@ -144,14 +184,14 @@ export default function Results({ answers }) {
       >
         <div className="stat">
           <span className="stat-num" style={{ color: "#f44336" }}>
-            {yesQuestions.length}
+            {redFlagCount}
           </span>
           <span className="stat-label">Red Flags</span>
         </div>
         <div className="stat-divider" />
         <div className="stat">
           <span className="stat-num" style={{ color: "#00e676" }}>
-            {noQuestions.length}
+            {greenFlagCount}
           </span>
           <span className="stat-label">Green Flags</span>
         </div>
@@ -172,20 +212,32 @@ export default function Results({ answers }) {
         transition={{ delay: 1.4 }}
       >
         <h3 className="section-title">📋 Detailed Breakdown</h3>
+        <p className="section-subtitle">Tap any item for the science behind it</p>
 
         {questions.map((q, i) => {
-          const isYes = answers[i];
+          const ans = answers[i];
+          const isRed = q.type === "red";
+          const isFlagged = isRed ? ans === "yes" : ans !== "yes";
           const isExpanded = expandedId === q.id;
+
+          const answerLabel =
+            ans === "yes" ? "YES" : ans === "not_sure" ? "NOT SURE" : "NO";
+
+          const explanation =
+            ans === "yes"
+              ? q.yesExplanation
+              : ans === "not_sure"
+                ? q.notSureExplanation
+                : q.noExplanation;
 
           return (
             <motion.div
               key={q.id}
-              className={`breakdown-item ${isYes ? "flag-red" : "flag-green"}`}
+              className={`breakdown-item ${isFlagged ? "flag-red" : "flag-green"}`}
               onClick={() => setExpandedId(isExpanded ? null : q.id)}
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4 + i * 0.05 }}
-              whileHover={{ scale: 1.01 }}
             >
               <div className="breakdown-header">
                 <div className="breakdown-left">
@@ -194,9 +246,19 @@ export default function Results({ answers }) {
                 </div>
                 <div className="breakdown-right">
                   <span
-                    className={`breakdown-answer ${isYes ? "ans-yes" : "ans-no"}`}
+                    className={`breakdown-answer ${
+                      ans === "yes"
+                        ? isRed
+                          ? "ans-yes"
+                          : "ans-green-yes"
+                        : ans === "not_sure"
+                          ? "ans-unsure"
+                          : isRed
+                            ? "ans-no"
+                            : "ans-green-no"
+                    }`}
                   >
-                    {isYes ? "YES" : "NO"}
+                    {answerLabel}
                   </span>
                   <span className="breakdown-chevron">
                     {isExpanded ? "▲" : "▼"}
@@ -212,27 +274,14 @@ export default function Results({ answers }) {
                   transition={{ duration: 0.3 }}
                 >
                   <div className="detail-analysis">
-                    <strong>Your Answer Analysis:</strong>
-                    <p>{isYes ? q.yesExplanation : q.noExplanation}</p>
+                    <strong>
+                      {isRed ? "🔴 Red Flag Analysis" : "🟢 Green Flag Analysis"}
+                    </strong>
+                    <p>{explanation}</p>
                   </div>
                   <div className="detail-context">
-                    <strong>The Science:</strong>
+                    <strong>📖 The Science</strong>
                     <p>{q.context}</p>
-                  </div>
-                  <div className="detail-weight">
-                    <strong>Indicator Strength:</strong>{" "}
-                    {q.weight}/10{" "}
-                    <span className="weight-bar-inline">
-                      <span
-                        className="weight-fill-inline"
-                        style={{
-                          width: `${q.weight * 10}%`,
-                          background: isYes
-                            ? "linear-gradient(90deg, #f44336, #ff1744)"
-                            : "linear-gradient(90deg, #00e676, #69f0ae)",
-                        }}
-                      />
-                    </span>
                   </div>
                 </motion.div>
               )}
@@ -241,7 +290,7 @@ export default function Results({ answers }) {
         })}
       </motion.div>
 
-      {/* Restart */}
+      {/* Bottom Restart */}
       <motion.div
         className="restart-section"
         initial={{ opacity: 0 }}
@@ -250,14 +299,16 @@ export default function Results({ answers }) {
       >
         <motion.button
           className="restart-btn"
-          onClick={() => window.location.reload()}
+          onClick={onRestart}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
         >
-          🔄 Start Over
+          🔄 Take It Again
         </motion.button>
         <p className="restart-disclaimer">
-          This assessment is for entertainment and educational purposes. The indicators used are based on published psychological research, but individual results may vary. Use good judgment.
+          This assessment is for entertainment and educational purposes. The
+          indicators used are based on published psychological research, but
+          individual results may vary. Use good judgment.
         </p>
       </motion.div>
     </motion.div>

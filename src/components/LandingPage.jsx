@@ -33,7 +33,7 @@ export default function LandingPage({ onStart }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          20 research-backed behavioral indicators.
+          12 research-backed behavioral indicators.
           <br />
           One definitive score.
         </motion.p>
@@ -44,9 +44,9 @@ export default function LandingPage({ onStart }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.8 }}
         >
-          Based on peer-reviewed psychology research on disgust sensitivity,
-          Big Five personality traits, sociosexual orientation, and behavioral
-          risk indicators. No shame — just science.
+          Based on peer-reviewed psychology research — disgust sensitivity,
+          Big Five personality, sociosexual orientation, K-selection theory, and
+          behavioral risk indicators. Red flags AND green flags. No shame — just science.
         </motion.p>
 
         <motion.button
@@ -69,7 +69,7 @@ export default function LandingPage({ onStart }) {
           transition={{ delay: 1.2 }}
         >
           <span>🔒 Anonymous</span>
-          <span>📊 20 Questions</span>
+          <span>📊 12 Questions</span>
           <span>⏱️ ~3 Minutes</span>
         </motion.div>
       </div>
