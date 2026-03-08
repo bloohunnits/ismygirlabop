@@ -98,10 +98,12 @@ body {
   position: relative;
   z-index: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   max-width: 640px;
+  min-height: calc(100vh - 48px);
 }
 
 .landing-content {
@@ -1464,8 +1466,19 @@ body {
 @media (max-width: 640px) {
   .app {
     padding: 16px;
-    align-items: flex-start;
     padding-top: 40px;
+  }
+
+  .app:has(.landing) {
+    align-items: center;
+    padding-top: 16px;
+  }
+
+  .app:has(.quiz-container),
+  .app:has(.results-container),
+  .app:has(.articles-page),
+  .app:has(.article-page) {
+    align-items: flex-start;
   }
 
   .question-card {
