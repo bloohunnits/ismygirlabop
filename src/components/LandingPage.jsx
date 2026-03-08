@@ -44,11 +44,9 @@ export default function LandingPage({ onStart }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.8 }}
         >
-          Look bro — this isn't about shaming anybody. This is about giving you
-          the game. Every question here is backed by actual research — personality
-          psychology, disgust sensitivity, sociosexual orientation, r/K selection
-          theory. Red flags AND green flags. We just want you to see what's in
-          front of you.
+          No shame. Just science. Every question is backed by real
+          research. Red flags and green flags. We just want you to
+          see what's in front of you bro.
         </motion.p>
 
         <motion.button

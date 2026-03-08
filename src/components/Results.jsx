@@ -6,30 +6,30 @@ function getVerdict(score) {
     return {
       label: "She's Clean 💚",
       color: "#00e676",
-      desc: "Bro, you're good. She's barely triggering any red flags and she's stacking green flags. This is the type of girl who's actually about it — relationship-minded, stable, the real deal. She's not a bop. Lock in.",
+      desc: "Bro you're good. She's barely triggering any red flags and she's stacking green flags. This is the type of girl who's actually about it. Relationship-minded, stable, the real deal. She's not a bop. Lock in.",
     };
   if (score <= 30)
     return {
       label: "Mostly Clear 💛",
       color: "#ffeb3b",
-      desc: "She's looking pretty solid, king. A couple minor things popped up but nothing crazy — could just be personality quirks. Keep your eyes open but don't psych yourself out. She's probably not a bop.",
+      desc: "She's looking pretty solid king. A couple minor things popped up but nothing crazy, could just be personality quirks. Keep your eyes open but don't psych yourself out. She's probably not a bop.",
     };
   if (score <= 50)
     return {
       label: "Proceed With Caution 🟠",
       color: "#ff9800",
-      desc: "Alright bro, listen — she's hitting a few too many flags and not enough green to balance it out. Any one of these alone? Maybe nothing. But when they start stacking up like this, that's a pattern. Have some real conversations and pay attention. She might be a bop.",
+      desc: "Alright bro listen. She's hitting a few too many flags and not enough green to balance it out. Any one of these alone? Maybe nothing. But when they start stacking up like this, that's a pattern. Have some real conversations and pay attention. She might be a bop.",
     };
   if (score <= 70)
     return {
       label: "High Risk 🔴",
       color: "#f44336",
-      desc: "I'm not gonna sugarcoat it, bro. Multiple strong red flags are popping and the green flags are nowhere to be found. The pattern here is consistent with a high body count. The science on these indicators is solid. She's likely a bop. Move accordingly.",
+      desc: "I'm not gonna sugarcoat it bro. Multiple strong red flags are popping and the green flags are nowhere to be found. The pattern here is consistent with a high body count. The science on these indicators is solid. She's likely a bop. Move accordingly.",
     };
   return {
     label: "Certified Bop 💀",
     color: "#ff1744",
-    desc: "Bro. She's hitting damn near everything. Red flags everywhere, green flags ghost. This pattern doesn't happen by accident — the research is overwhelming. By every measurable standard, she is a bop. I'm telling you this as your boy. Act on this information.",
+    desc: "Bro. She's hitting damn near everything. Red flags everywhere, green flags ghost. This pattern doesn't happen by accident. The research is overwhelming. By every measurable standard, she is a bop. I'm telling you this as your boy. Act on this information.",
   };
 }
 
@@ -59,7 +59,7 @@ export default function Results({ answers, questions, onRestart, onHome }) {
   // =============================================
   // SMART SCORING ENGINE
   // =============================================
-  // Red flags:   yes = full weight | not_sure = 30% (benefit of the doubt — you'd probably notice) | no = 0
+  // Red flags:   yes = full weight | not_sure = 30% (benefit of the doubt, you'd probably notice) | no = 0
   // Green flags: yes = full weight | not_sure = 20% (if she had it, you'd know) | no = 0
   //
   // "Not Sure" asymmetry: red flags get more benefit of doubt because
@@ -88,7 +88,7 @@ export default function Results({ answers, questions, onRestart, onHome }) {
   const redPct = maxRed > 0 ? redScore / maxRed : 0;
   const greenPct = maxGreen > 0 ? greenScore / maxGreen : 0;
 
-  // Red% pushes up, green% pulls down — green flags are protective but can't erase red flags entirely
+  // Red% pushes up, green% pulls down. Green flags are protective but can't erase red flags entirely
   const rawScore = (redPct * 100) - (greenPct * 50);
   const score = Math.max(0, Math.min(100, Math.round(rawScore)));
 
@@ -324,9 +324,9 @@ export default function Results({ answers, questions, onRestart, onHome }) {
           🔄 Take It Again
         </motion.button>
         <p className="restart-disclaimer">
-          This is for the fellas — entertainment and education. Every indicator
+          This is for the fellas. Entertainment and education. Every indicator
           is based on real published research, but no quiz replaces your own
-          judgment. Use this as a tool, not a verdict. Stay sharp out there, king.
+          judgment. Use this as a tool, not a verdict. Stay sharp out there king.
         </p>
       </motion.div>
     </motion.div>
