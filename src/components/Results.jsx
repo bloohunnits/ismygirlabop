@@ -53,36 +53,42 @@ function AnimatedScore({ target }) {
   return <span>{displayed}</span>;
 }
 
-export default function Results({ answers, questions, onRestart }) {
+export default function Results({ answers, questions, onRestart, onHome }) {
   const [expandedId, setExpandedId] = useState(null);
 
-  // Calculate score
-  // Red flags: yes=full weight toward bop, not_sure=half, no=0
-  // Green flags: yes=full weight AGAINST bop, not_sure=half, no=0
-  const maxScore = questions.reduce((sum, q) => sum + q.weight, 0);
+  // =============================================
+  // SMART SCORING ENGINE
+  // =============================================
+  // Red flags:   yes = full weight | not_sure = 30% (benefit of the doubt — you'd probably notice) | no = 0
+  // Green flags: yes = full weight | not_sure = 20% (if she had it, you'd know) | no = 0
+  //
+  // "Not Sure" asymmetry: red flags get more benefit of doubt because
+  // people tend to miss red flags more than green flags. If a green flag
+  // were truly present (reads books, close with dad, etc.) it's visible.
 
   let redScore = 0;
   let greenScore = 0;
 
   questions.forEach((q, i) => {
     const ans = answers[i];
-    const mult = ans === "yes" ? 1 : ans === "not_sure" ? 0.5 : 0;
 
     if (q.type === "red") {
+      const mult = ans === "yes" ? 1 : ans === "not_sure" ? 0.3 : 0;
       redScore += q.weight * mult;
     } else {
+      const mult = ans === "yes" ? 1 : ans === "not_sure" ? 0.2 : 0;
       greenScore += q.weight * mult;
     }
   });
 
-  // Final score: red flags push up, green flags push down
+  // Final score: red flags push toward 100, green flags push toward 0
   const maxRed = questions.filter((q) => q.type === "red").reduce((s, q) => s + q.weight, 0);
   const maxGreen = questions.filter((q) => q.type === "green").reduce((s, q) => s + q.weight, 0);
 
   const redPct = maxRed > 0 ? redScore / maxRed : 0;
   const greenPct = maxGreen > 0 ? greenScore / maxGreen : 0;
 
-  // Score: red% pushes toward 100, green% pushes toward 0
+  // Red% pushes up, green% pulls down — green flags are protective but can't erase red flags entirely
   const rawScore = (redPct * 100) - (greenPct * 50);
   const score = Math.max(0, Math.min(100, Math.round(rawScore)));
 
@@ -101,18 +107,30 @@ export default function Results({ answers, questions, onRestart }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      {/* Floating restart */}
-      <motion.button
-        className="floating-restart"
-        onClick={onRestart}
+      {/* Floating top bar */}
+      <motion.div
+        className="results-top-bar"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.97 }}
       >
-        ↻ Start Over
-      </motion.button>
+        <motion.button
+          className="home-btn"
+          onClick={onHome}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          ← Home
+        </motion.button>
+        <motion.button
+          className="floating-restart"
+          onClick={onRestart}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          ↻ Start Over
+        </motion.button>
+      </motion.div>
 
       {/* Score Hero */}
       <motion.div

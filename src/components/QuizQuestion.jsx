@@ -5,6 +5,7 @@ export default function QuizQuestion({
   currentIndex,
   total,
   onAnswer,
+  onHome,
 }) {
   const progress = (currentIndex / total) * 100;
 
@@ -15,19 +16,29 @@ export default function QuizQuestion({
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      {/* Progress Bar */}
-      <div className="progress-wrapper">
-        <div className="progress-bar">
-          <motion.div
-            className="progress-fill"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          />
+      {/* Top bar: Home + Progress */}
+      <div className="quiz-top-bar">
+        <motion.button
+          className="home-btn"
+          onClick={onHome}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          ← Home
+        </motion.button>
+        <div className="progress-wrapper">
+          <div className="progress-bar">
+            <motion.div
+              className="progress-fill"
+              initial={{ width: 0 }}
+              animate={{ width: `${progress}%` }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            />
+          </div>
+          <span className="progress-text">
+            {currentIndex + 1} / {total}
+          </span>
         </div>
-        <span className="progress-text">
-          {currentIndex + 1} / {total}
-        </span>
       </div>
 
       <AnimatePresence mode="wait">

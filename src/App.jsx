@@ -42,6 +42,13 @@ function App() {
     setScreen("quiz");
   }, []);
 
+  const handleHome = useCallback(() => {
+    setScreen("landing");
+    setQuestions([]);
+    setCurrentQ(0);
+    setAnswers([]);
+  }, []);
+
   return (
     <div className="app">
       <div className="bg-noise" />
@@ -58,6 +65,7 @@ function App() {
             currentIndex={currentQ}
             total={QUIZ_LENGTH}
             onAnswer={handleAnswer}
+            onHome={handleHome}
           />
         )}
         {screen === "results" && (
@@ -66,6 +74,7 @@ function App() {
             answers={answers}
             questions={questions}
             onRestart={handleRestart}
+            onHome={handleHome}
           />
         )}
       </AnimatePresence>
